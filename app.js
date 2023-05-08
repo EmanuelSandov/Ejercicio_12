@@ -33,7 +33,7 @@ app.get('/productos',(req,res)=>{
 });
 
 app.get('/practica',(req,res)=>{
-    res.render("practica");
+    res.render("Practica");
 });
 
 app.get('*',(req,res)=>{
