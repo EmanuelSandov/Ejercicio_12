@@ -32,6 +32,10 @@ app.get('/productos',(req,res)=>{
     res.render("productos");
 });
 
+app.get('/practica',(req,res)=>{
+    res.render("practica");
+});
+
 app.get('*',(req,res)=>{
     res.render('404');
 });

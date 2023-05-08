@@ -29,7 +29,7 @@
         <a class="flex items-center" href="/">
           <img src="assets/images/logo/logo-c.svg" class="black_logo" alt="logo">
           <img src="assets/images/logo/logo-c-white.svg" class="white_logo" alt="logo">
-          <span class="ltr:ml-3 rtl:mr-3 text-xl font-Inter font-bold text-slate-900 dark:text-white">SiVeO</span>
+          <span class="ltr:ml-3 rtl:mr-3 text-xl font-Inter font-bold text-slate-900 dark:text-white">PawTracks</span>
         </a>
         <!-- Sidebar Type Button -->
         <div id="sidebar_type" class="cursor-pointer text-slate-900 dark:text-white text-lg">
@@ -1609,18 +1609,20 @@
                       </a>
                     </li>
                     <li class="inline-block relative text-sm text-primary-500 font-Inter ">
-                      SiVeO
+                      PawTracks
                       <iconify-icon icon="heroicons-outline:chevron-right" class="relative top-[3px] text-slate-500 rtl:rotate-180"></iconify-icon>
                     </li>
                     <li class="inline-block relative text-sm text-slate-500 font-Inter dark:text-white">
-                      Productos</li>
+                      Registro</li>
                   </ul>
                 </div>
                 <!-- END: BreadCrumb -->
+
+
                 <div class=" space-y-5">
                  <div class="card">
                     <header class=" card-header noborder">
-                      <h4 class="card-title">Productos
+                      <h4 class="card-title">Registro
                       </h4>
                       <button data-bs-toggle="modal" data-bs-target="#successModal" class="btn inline-flex justify-center btn-success">Nueva</button>
                       
@@ -1632,7 +1634,7 @@
                                   <!-- Modal header -->
                                   <div class="flex items-center justify-between p-5 border-b rounded-t dark:border-slate-600 bg-success-500">
                                     <h3 class="text-base font-medium text-white dark:text-white capitalize">
-                                      Nuevo Producto
+                                      Alta de Mascotas
                                     </h3>
                                     <button type="button" class="text-slate-400 bg-transparent hover:text-slate-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center
                                                         dark:hover:bg-slate-600 dark:hover:text-white" data-bs-dismiss="modal">
@@ -1645,43 +1647,61 @@
                                   </div>
                                   <!-- Modal body -->
                                   <div class="p-6 space-y-4">
-                                    <div class="card-text h-full space-y-4">
-                                        <div class="input-area">
-                                          <label for="name" class="form-label">Descripcion</label>
-                                          <input id="name" type="text" class="form-control" placeholder="Diguite el nombre del producto">
-                                        </div>
-                        
-                        
-                                        <div class="card-text h-full space-y-6">
-                        <div class="grid md:grid-cols-2 gap-6">
-                          <div>
-                            <label for="basicSelect" class="form-label">Categorias</label>
-                            <select name="basicSelect" id="basicSelect" class="form-control w-full mt-2">
-                              <option selected="Selected" disabled="disabled" value="none" class="py-1 inline-block font-Inter font-normal text-sm text-slate-600">Seleccione</option>
-                              <option value="option1" class="py-1 inline-block font-Inter font-normal text-sm text-slate-600">Option 1</option>
-                              <option value="option2" class="py-1 inline-block font-Inter font-normal text-sm text-slate-600">Option 2</option>
-                              <option value="option3" class="py-1 inline-block font-Inter font-normal text-sm text-slate-600">Option 3</option>
-                            </select>
-                          </div>
-                          <div>
-                            <label for="basicSelect" class="form-label">Provedores</label>
-                            <select name="basicSelect" id="basicSelect" class="form-control w-full mt-2">
-                              <option selected="Selected" disabled="disabled" value="none" class="py-1 inline-block font-Inter font-normal text-sm text-slate-600">Seleccione</option>
-                              <option value="option1" class="py-1 inline-block font-Inter font-normal text-sm text-slate-600">Option 1</option>
-                              <option value="option2" class="py-1 inline-block font-Inter font-normal text-sm text-slate-600">Option 2</option>
-                              <option value="option3" class="py-1 inline-block font-Inter font-normal text-sm text-slate-600">Option 3</option>
-                            </select>
-                          </div>
-                        </div>
+                        <form class="space-y-4">
+                          <div class="card-text h-full">
+                        <form class="space-y-4" id="multipleValidation">
+                          <div class="grid md:grid-cols-2 gap-6">
+                            <div class="input-area">
+                              <label for="name" class="form-label">Nombre</label>
+                              <div class="relative">
+                                <input id="name" type="text" name="name" class="form-control" placeholder="Digite su nombre" required="required">
+                              </div>
+                              
+                            </div>
+                            <form class="space-y-4">
+                            <div class="input-area">
+                              <label for="select" class="form-label">Especie</label>
+                              <select id="select" class="form-control">
+                                <option value="option1" class="dark:bg-slate-700">Perro</option>
+                                <option value="option2" class="dark:bg-slate-700">Country 2</option>
+                                <option value="option3" class="dark:bg-slate-700">Country 3</option>
+                                <option value="option4" class="dark:bg-slate-700">Country 4</option>
+                              </select>
+                            </div>
+                            
+                             </div>
+                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+                            <div class="input-area">
+                              <label for="select" class="form-label">Genero</label>
+                              <select id="select" class="form-control">
+                                <option value="option1" class="dark:bg-slate-700">Macho</option>
+                                <option value="option2" class="dark:bg-slate-700">Country 2</option>
+                                <option value="option3" class="dark:bg-slate-700">Country 3</option>
+                                <option value="option4" class="dark:bg-slate-700">Country 4</option>
+                              </select>
+                            </div>
+                            <div class="input-area">
+                        <label for="default-picker" class=" form-label">Fecha de nacimiento</label>
+                        <input class="form-control py-2 flatpickr flatpickr-input active" id="default-picker" value="" type="text" readonly="readonly">
                       </div>
-                      <div class="input-area">
-                                          <label for="name" class="form-label">Precio</label>
-                                          <input id="name" type="text" class="form-control" placeholder="0">       
-                                        </div>
-                    </div>
-                  </div>
-                  <div class="card xl:col-span-2">
+                            <div class="input-area">
+                                <label for="select" class="form-label">Color</label>
+                                <div>
+                            <div class="color-box h-[50px] 2xl:w-[107px] w-[50px] bg-warning-700 rounded-md flex flex-col text-white p-4 transition-all duration-200 hover:shadow-sm hover:-translate-y-1"></div>
+                        
+                          </div>
+                          </div>
+                            </div>
+                            <div class="card-text h-full space-y-4">
+                        <div class="input-area">
+<label for="description" class="form-label">Observaciones</label>
+                          <textarea id="description" rows="5" class="form-control" placeholder="Descripccion"></textarea>                        </div>
+                            </div>
+                            </form>
+                          </div>
+                        </form>
                                   </div>
+                                </div>
                                   <!-- Modal footer -->
                                   <div class="flex items-center p-6 space-x-2 border-t border-slate-200 rounded-b dark:border-slate-600">
                                     <button data-bs-dismiss="modal" class="btn inline-flex justify-center text-white bg-success-500">Guardar</button>
@@ -1695,11 +1715,13 @@
                             <div class="modal-dialog top-1/2 !-translate-y-1/2 relative w-auto pointer-events-none">
                               <div class="modal-content border-none shadow-lg relative flex flex-col w-full pointer-events-auto bg-white bg-clip-padding
                                             rounded-md outline-none text-current">
+                                <div class="modal-content border-none shadow-lg relative flex flex-col w-full pointer-events-auto bg-white bg-clip-padding
+                                            rounded-md outline-none text-current">
                                 <div class="relative bg-white rounded-lg shadow dark:bg-slate-700">
                                   <!-- Modal header -->
                                   <div class="flex items-center justify-between p-5 border-b rounded-t dark:border-slate-600 bg-primary-500">
                                     <h3 class="text-base font-medium text-white dark:text-white capitalize">
-                                      Actualizar Producto
+                                      Actualizar Mascotas
                                     </h3>
                                     <button type="button" class="text-slate-400 bg-transparent hover:text-slate-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center
                                                         dark:hover:bg-slate-600 dark:hover:text-white" data-bs-dismiss="modal">
@@ -1712,46 +1734,64 @@
                                   </div>
                                   <!-- Modal body -->
                                   <div class="p-6 space-y-4">
-                                    <div class="card-text h-full space-y-4">
-                                        <div class="input-area">
-                                          <label for="name" class="form-label">Descripcion</label>
-                                          <input id="name" type="text" class="form-control" placeholder="Diguite el nombre del producto">
-                                        </div>
-                        
-                        
-                                        <div class="card-text h-full space-y-6">
-                        <div class="grid md:grid-cols-2 gap-6">
-                          <div>
-                            <label for="basicSelect" class="form-label">Categorias</label>
-                            <select name="basicSelect" id="basicSelect" class="form-control w-full mt-2">
-                              <option selected="Selected" disabled="disabled" value="none" class="py-1 inline-block font-Inter font-normal text-sm text-slate-600">Seleccione</option>
-                              <option value="option1" class="py-1 inline-block font-Inter font-normal text-sm text-slate-600">Option 1</option>
-                              <option value="option2" class="py-1 inline-block font-Inter font-normal text-sm text-slate-600">Option 2</option>
-                              <option value="option3" class="py-1 inline-block font-Inter font-normal text-sm text-slate-600">Option 3</option>
-                            </select>
-                          </div>
-                          <div>
-                            <label for="basicSelect" class="form-label">Provedores</label>
-                            <select name="basicSelect" id="basicSelect" class="form-control w-full mt-2">
-                              <option selected="Selected" disabled="disabled" value="none" class="py-1 inline-block font-Inter font-normal text-sm text-slate-600">Seleccione</option>
-                              <option value="option1" class="py-1 inline-block font-Inter font-normal text-sm text-slate-600">Option 1</option>
-                              <option value="option2" class="py-1 inline-block font-Inter font-normal text-sm text-slate-600">Option 2</option>
-                              <option value="option3" class="py-1 inline-block font-Inter font-normal text-sm text-slate-600">Option 3</option>
-                            </select>
-                          </div>
-                        </div>
+                        <form class="space-y-4">
+                          <div class="card-text h-full">
+                        <form class="space-y-4" id="multipleValidation">
+                          <div class="grid md:grid-cols-2 gap-6">
+                            <div class="input-area">
+                              <label for="name" class="form-label">Nombre</label>
+                              <div class="relative">
+                                <input id="name" type="text" name="name" class="form-control" placeholder="Digite su nombre" required="required">
+                              </div>
+                              
+                            </div>
+                            <form class="space-y-4">
+                            <div class="input-area">
+                              <label for="select" class="form-label">Especie</label>
+                              <select id="select" class="form-control">
+                                <option value="option1" class="dark:bg-slate-700">Perro</option>
+                                <option value="option2" class="dark:bg-slate-700">Country 2</option>
+                                <option value="option3" class="dark:bg-slate-700">Country 3</option>
+                                <option value="option4" class="dark:bg-slate-700">Country 4</option>
+                              </select>
+                            </div>
+                            
+                             </div>
+                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+                            <div class="input-area">
+                              <label for="select" class="form-label">Genero</label>
+                              <select id="select" class="form-control">
+                                <option value="option1" class="dark:bg-slate-700">Macho</option>
+                                <option value="option2" class="dark:bg-slate-700">Country 2</option>
+                                <option value="option3" class="dark:bg-slate-700">Country 3</option>
+                                <option value="option4" class="dark:bg-slate-700">Country 4</option>
+                              </select>
+                            </div>
+                            <div class="input-area">
+                        <label for="default-picker" class=" form-label">Fecha de nacimiento</label>
+                        <input class="form-control py-2 flatpickr flatpickr-input active" id="default-picker" value="" type="text" readonly="readonly">
                       </div>
-                      <div class="input-area">
-                                          <label for="name" class="form-label">Precio</label>
-                                          <input id="name" type="text" class="form-control" placeholder="0">       
-                                        </div>
-                    </div>
-                  </div>
-                  <div class="card xl:col-span-2">
+                            <div class="input-area">
+                                <label for="select" class="form-label">Color</label>
+                                <div>
+                            <div class="color-box h-[50px] 2xl:w-[107px] w-[50px] bg-warning-700 rounded-md flex flex-col text-white p-4 transition-all duration-200 hover:shadow-sm hover:-translate-y-1"></div>
+                        
+                          </div>
+                          </div>
+                            </div>
+                            <div class="card-text h-full space-y-4">
+                        <div class="input-area">
+<label for="description" class="form-label">Observaciones</label>
+                          <textarea id="description" rows="5" class="form-control" placeholder="Descripccion"></textarea>                        </div>
+                            </div>
+                            </form>
+                          </div>
+                        </form>
                                   </div>
+                                </div>
                                   <!-- Modal footer -->
                                   <div class="flex items-center p-6 space-x-2 border-t border-slate-200 rounded-b dark:border-slate-600">
-                                    <button data-bs-dismiss="modal" class="btn inline-flex justify-center text-white bg-primary-500">Actualizar</button>
+                                    <button data-bs-dismiss="modal" class="btn inline-flex justify-center text-white bg-primary-500">Guardar</button>
                                     <button data-bs-dismiss="modal" class="btn inline-flex justify-center text-white bg-secondary-500">Cancelar</button>
                                   </div>
                                 </div>
@@ -1766,7 +1806,7 @@
                                   <!-- Modal header -->
                                   <div class="flex items-center justify-between p-5 border-b rounded-t dark:border-slate-600 bg-warning-500">
                                     <h3 class="text-base font-medium text-white dark:text-white capitalize">
-                                      Visualizar productos
+                                      Visualizar mascota
                                     </h3>
                                     <button type="button" class="text-slate-400 bg-transparent hover:text-slate-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center
                                                         dark:hover:bg-slate-600 dark:hover:text-white" data-bs-dismiss="modal">
@@ -1781,14 +1821,14 @@
                                   <div class="p-6 space-y-4">
                                     <div class="card-text h-full space-y-4">
                                         <div class="input-area">
-                                          <label for="name" class="form-label">Nombre*</label>
+                                          <label for="name" class="form-label">Mascota*</label>
                                           <input id="name" type="text" class="form-control" placeholder="Digite nombre de categoria" value="Alimentos y bebidas" readonly>
                                         </div>
                         
                         
                                         <div class="input-area">
                                           <label for="description" class="form-label">Observaciones</label>
-                                          <textarea id="description" rows="5" class="form-control" placeholder="Digite observaciones" readonly>Para productos</textarea>
+                                          <textarea id="description" rows="5" class="form-control" placeholder="Digite observaciones" readonly></textarea>
                                         </div>
           
                                       </div>
@@ -1809,7 +1849,7 @@
                                   <!-- Modal header -->
                                   <div class="flex items-center justify-between p-5 border-b rounded-t dark:border-slate-600 bg-danger-500">
                                     <h3 class="text-base font-medium text-white dark:text-white capitalize">
-                                      Eliminar productos
+                                      Eliminar mascotas
                                     </h3>
                                     <button type="button" class="text-slate-400 bg-transparent hover:text-slate-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center
                                                         dark:hover:bg-slate-600 dark:hover:text-white" data-bs-dismiss="modal">
@@ -1823,7 +1863,7 @@
                                   <!-- Modal body -->
                                   <div class="p-6 space-y-4">
                                     <div class="card-text h-full space-y-4">
-                                      <p>Esta seguro que quiere eliminar el producto ?</p>   
+                                      <p>Esta seguro que quiere eliminar la mascota?</p>   
                                     </div>
                                   </div>
                                   <!-- Modal footer -->
@@ -1845,41 +1885,27 @@
                             <table class="min-w-full divide-y divide-slate-100 table-fixed dark:divide-slate-700 data-table">
                               <thead class=" bg-slate-200 dark:bg-slate-700">
                                 <tr>
+                                  <th scope="col" class=" table-th ">
+                                    Nombre
+                                  </th>
+                                   <th scope="col" class=" table-th ">
+                                    Genero
+                                  </th>
+                                   <th scope="col" class=" table-th ">
+                                    Fecha de nacimeinto
+                                  </th>
 
                                   <th scope="col" class=" table-th ">
-                                    Descripción
+                                    Accioneses
                                   </th>
-                                    <th scope="col" class=" table-th ">
-                                    Precio
-                                  </th>
-                                  <th scope="col" class=" table-th ">
-                                    Acciones
-                                  </th>
-
                                 </tr>
                               </thead>
                               <tbody class="bg-white divide-y divide-slate-100 dark:bg-slate-800 dark:divide-slate-700">
 
                                 <tr>
-                                  <td class="table-td">Pan</td>
-                                  <td class="table-td">$50.00</td>
-                                  <td class="table-td ">
-                                    <div class="flex space-x-3 rtl:space-x-reverse">
-                                      <button data-bs-toggle="modal" data-bs-target="#viewModal" class="action-btn" type="button">
-                                        <iconify-icon icon="heroicons:eye"></iconify-icon>
-                                      </button>
-                                      <button data-bs-toggle="modal" data-bs-target="#updateModal" class="action-btn" type="button">
-                                        <iconify-icon icon="heroicons:pencil-square"></iconify-icon>
-                                      </button>
-                                      <button data-bs-toggle="modal" data-bs-target="#deleteModal" class="action-btn" type="button">
-                                        <iconify-icon icon="heroicons:trash"></iconify-icon>
-                                      </button>
-                                    </div>
-                                  </td>
-                                </tr>
-                               <tr>
-                                  <td class="table-td">Queso</td>
-                                  <td class="table-td">$60.00</td>
+                                  <td class="table-td">Laila</td>
+                                  <td class="table-td">Laila</td>
+                                  <td class="table-td">15 de mayo de 2018</td>
                                   <td class="table-td ">
                                     <div class="flex space-x-3 rtl:space-x-reverse">
                                       <button data-bs-toggle="modal" data-bs-target="#viewModal" class="action-btn" type="button">
@@ -1895,8 +1921,9 @@
                                   </td>
                                 </tr>
                                 <tr>
-                                  <td class="table-td">Chocolatre</td>
-                                  <td class="table-td">$10.00</td>
+                                  <td class="table-td">Rocky</td>
+                                  <td class="table-td">macho</td>
+                                  <td class="table-td">3 de julio de 2011</td>
                                   <td class="table-td ">
                                     <div class="flex space-x-3 rtl:space-x-reverse">
                                       <button data-bs-toggle="modal" data-bs-target="#viewModal" class="action-btn" type="button">
@@ -1912,8 +1939,27 @@
                                   </td>
                                 </tr>
                                 <tr>
-                                  <td class="table-td">Dulce</td>
-                                  <td class="table-td">$5.00</td>
+                                  <td class="table-td">Bella</td>
+                                  <td class="table-td">Hembra</td>
+                                  <td class="table-td">22 de agosto de 2020</td>
+                                  <td class="table-td ">
+                                    <div class="flex space-x-3 rtl:space-x-reverse">
+                                      <button data-bs-toggle="modal" data-bs-target="#viewModal" class="action-btn" type="button">
+                                        <iconify-icon icon="heroicons:eye"></iconify-icon>
+                                      </button>
+                                      <button data-bs-toggle="modal" data-bs-target="#updateModal" class="action-btn" type="button">
+                                        <iconify-icon icon="heroicons:pencil-square"></iconify-icon>
+                                      </button>
+                                      <button data-bs-toggle="modal" data-bs-target="#deleteModal" class="action-btn" type="button">
+                                        <iconify-icon icon="heroicons:trash"></iconify-icon>
+                                      </button>
+                                    </div>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td class="table-td">Beyle</td>
+                                  <td class="table-td">Hembra</td>
+                                  <td class="table-td">29 de diciembre de 2018</td>
                                   <td class="table-td ">
                                     <div class="flex space-x-3 rtl:space-x-reverse">
                                       <button data-bs-toggle="modal" data-bs-target="#viewModal" class="action-btn" type="button">
